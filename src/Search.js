@@ -18,9 +18,8 @@ class Search extends Component {
   }
 
   getInfo = () => {  
-    //axios.get(`${API_URL}address=${this.state.query}&radius=${this.state.radius}`)
     if(this.state.query !== '') {
-        axios.get(`https://jsonplaceholder.typicode.com/posts`)
+      axios.get(`${API_URL}address=${this.state.query}&radius=${this.state.radius}`)
         .then(({ data }) => {
             console.log(data)
             this.setState({
